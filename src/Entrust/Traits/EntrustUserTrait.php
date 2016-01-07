@@ -117,7 +117,7 @@ trait EntrustUserTrait
     {
         if (is_array($permission)) {
             foreach ($permission as $permName) {
-                $hasPerm = $this->can($permName);
+                $hasPerm = $this->hasPermission($permName);
 
                 if ($hasPerm && !$requireAll) {
                     return true;
